@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vision Holding Immo - Investissez en Immobilier</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #172d41, #d58042);
+            overflow-x: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            animation: fadeIn 2s ease-out;
+        }
+
+        header {
+            background-color: rgba(23, 45, 65, 0.9);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 700px;
+            margin: 10px;
+            animation: slideDown 1.5s ease-out;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin: 0;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        header p {
+            font-size: 1.125rem;
+            margin-top: 0.5rem;
+            animation: fadeInUp 1.5s ease-out;
+        }
+
+        main {
+            width: 100%;
+            max-width: 700px;
+            padding: 2rem;
+            text-align: center;
+            animation: fadeIn 2s ease-out;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.85);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transform: scale(0.95);
+            animation: scaleUp 1s ease-out forwards;
+        }
+
+        .container h1 {
+            color: #172d41;
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 1.25rem;
+            animation: fadeInUp 1.5s ease-out;
+        }
+
+        .container p {
+            color: #6c757d;
+            margin-bottom: 1.25rem;
+            font-size: 1.125rem;
+        }
+
+        input[type="text"],
+        input[type="email"] {
+            width: 100%;
+            padding: 1rem;
+            margin: 0.75rem 0;
+            border: 1px solid #ced4da;
+            border-radius: 6px;
+            font-size: 1rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
+            opacity: 0;
+            animation: fadeIn 1.5s ease-out forwards;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus {
+            transform: scale(1.05);
+            border-color: #d58042;
+            background-color: #f8f9fa;
+            box-shadow: 0 0 8px rgba(213, 128, 66, 0.6);
+        }
+
+        button {
+            background-color: #d58042;
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 6px;
+            font-size: 1.125rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            opacity: 0;
+            animation: fadeIn 1.5s ease-out 0.5s forwards;
+        }
+
+        button:hover {
+            background-color: #c4723a;
+            transform: scale(1.05);
+        }
+
+        .confirmation-message {
+            display: none;
+            background-color: #f1f1f1;
+            padding: 1.25rem;
+            border-radius: 8px;
+            margin-top: 1.25rem;
+            font-size: 1.125rem;
+            color: #333;
+            animation: fadeIn 2s ease-out;
+        }
+
+        .confirmation-message a {
+            color: #d58042;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideDown {
+            0% {
+                transform: translateY(-100px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes scaleUp {
+            0% {
+                transform: scale(0.95);
+                opacity: 0;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            header p {
+                font-size: 1rem;
+            }
+
+            .container h1 {
+                font-size: 1.75rem;
+            }
+
+            .container p {
+                font-size: 1rem;
+            }
+
+            input[type="text"],
+            input[type="email"] {
+                padding: 0.75rem;
+                font-size: 1rem;
+            }
+
+            button {
+                padding: 1rem 1.5rem;
+                font-size: 1rem;
+            }
+
+            .confirmation-message {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Vision Holding Immo</h1>
+        <p>Votre partenaire pour l'immobilier au Sénégal et en Afrique</p>
+    </header>
+    <main>
+        <div class="container">
+            <h1>Investissez dans l'Avenir</h1>
+            <p>Recevez nos conseils immobiliers en remplissant vos informations ci-dessous.</p>
+            <form action="https://formspree.io/f/xovqgglr" method="POST" id="contactForm">
+                <input type="text" id="prenom" name="prenom" placeholder="Prénom" required>
+                <input type="text" id="nom" name="nom" placeholder="Nom" required>
+                <input type="email" id="email" name="email" placeholder="Adresse Email" required>
+                <button type="submit">Recevoir des Conseils</button>
+            </form>
+            <div id="confirmation" class="confirmation-message">
+                <p>Merci pour votre inscription ! Vous recevrez bientôt vos conseils par email.</p>
+                <p>En attendant, n'hésitez pas à <a href="https://www.visionholdingimmo.com" target="_blank">explorer nos offres et solutions disponibles sur notre site.</a></p>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Empêche la soumission du formulaire par défaut
+
+            // Afficher le message de confirmation
+            document.getElementById('confirmation').style.display = 'block';
+
+            // Réinitialiser le formulaire
+            document.getElementById('contactForm').reset();
+        });
+    </script>
+</body>
+</html>
